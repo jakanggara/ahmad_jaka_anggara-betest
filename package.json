@@ -1,0 +1,50 @@
+{
+  "name": "ms-ahmad_jaka_anggara-betest",
+  "version": "1.0.0",
+  "description": "code.id recruitment test",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/src/index.js",
+    "dev": "nodemon -e ts,js --exec ts-node src/index.ts",
+    "test": "ts-node test/index.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jakanggara/ahmad_jaka_anggara-betest.git"
+  },
+  "keywords": [
+    "recruitment",
+    "code.id"
+  ],
+  "author": "jaka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakanggara/ahmad_jaka_anggara-betest/issues"
+  },
+  "homepage": "https://github.com/jakanggara/ahmad_jaka_anggara-betest#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.12.7",
+    "@types/supertest": "^6.0.2",
+    "@types/tape": "^5.6.4",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5",
+    "supertest": "^6.3.4",
+    "tape": "^5.7.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.2",
+    "redis": "^4.6.13"
+  }
+}

@@ -1,0 +1,35 @@
+version: "1.0"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3000"
+    depends_on:
+      - mongo
+      - redis
+    environment:
+      - MONGODB_URI=mongodb://db-ahmad_jaka_anggara-betest:27017/db-ahmad_jaka_anggara-betest
+      - REDIS_HOST=redis-ahmad_jaka_anggara-betest
+    container_name: ahmad_jaka_anggara-betest
+
+  # MongoDB
+  mongo:
+    image: mongodb/mongodb-community-server:latest
+    container_name: db-ahmad_jaka_anggara-betest
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  # Redis
+  redis:
+    image: redis:latest
+    container_name: redis-ahmad_jaka_anggara-betest
+    ports:
+      - "6379:6379"
+
+volumes:
+  mongodb_data:
